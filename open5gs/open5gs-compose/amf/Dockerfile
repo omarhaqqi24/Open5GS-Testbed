@@ -15,7 +15,10 @@ RUN apt-get update && \
         open5gs-common \
         gosu \
         ca-certificates \
-        netbase && \
+        netbase \
+        iputils-ping \
+        curl \
+        dnsutils && \
     mkdir -p /var/log/open5gs /etc/open5gs/tls /etc/open5gs/custom /var/run/open5gs && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*

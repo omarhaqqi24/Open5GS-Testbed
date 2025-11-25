@@ -1,0 +1,79 @@
+================================================================================
+Open5GS Deployment Summary
+================================================================================
+Timestamp: 2025-11-19 00:43:23
+Deployment ID: 20251119_004150
+
+================================================================================
+OVERALL TIMING
+================================================================================
+Total Deployment Time: 93366ms (93.36s)
+
+Phase Breakdown:
+  - Stop Services:     17ms
+  - Cleanup:           130ms
+  - Foundation:        8255ms
+  - ConfigMaps:        5674ms
+  - Parallel Deploy:   73696ms
+  - Metrics Collection: 5573ms
+
+================================================================================
+PER-POD DEPLOYMENT TIME (ms)
+================================================================================
+nrf:                 20704 ms
+scp:                 30655 ms
+
+================================================================================
+NRF/SCP METRICS
+================================================================================
+NRF Registered NFs:   0
+SCP Registration Events: 8
+
+================================================================================
+DEPLOYED RESOURCES
+================================================================================
+NAME     READY   STATUS    RESTARTS   AGE   IP            NODE   NOMINATED NODE   READINESS GATES
+amf-0    1/1     Running   0          27s   10.10.0.5     omar   <none>           <none>
+ausf-0   1/1     Running   0          27s   10.10.0.11    omar   <none>           <none>
+nrf-0    1/1     Running   0          79s   10.10.0.10    omar   <none>           <none>
+nssf-0   1/1     Running   0          26s   10.10.0.14    omar   <none>           <none>
+pcf-0    1/1     Running   0          26s   10.10.0.13    omar   <none>           <none>
+scp-0    1/1     Running   0          58s   10.10.0.200   omar   <none>           <none>
+smf-0    1/1     Running   0          26s   10.10.0.4     omar   <none>           <none>
+udm-0    1/1     Running   0          26s   10.10.0.12    omar   <none>           <none>
+udr-0    1/1     Running   0          27s   10.10.0.20    omar   <none>           <none>
+upf-0    1/1     Running   0          26s   10.10.0.7     omar   <none>           <none>
+
+================================================================================
+SERVICES
+================================================================================
+NAME      TYPE        CLUSTER-IP      EXTERNAL-IP      PORT(S)                      AGE
+amf       ClusterIP   10.43.180.184   10.200.239.3   7777/TCP,38412/SCTP          28s
+ausf      ClusterIP   10.43.59.1      <none>           7777/TCP                     28s
+mongodb   ClusterIP   None            <none>           27017/TCP                    91s
+nrf       ClusterIP   10.43.81.81     <none>           7777/TCP                     80s
+nssf      ClusterIP   10.43.238.210   <none>           7777/TCP                     28s
+pcf       ClusterIP   10.43.218.137   <none>           7777/TCP                     28s
+scp       ClusterIP   10.43.219.140   <none>           7777/TCP                     59s
+smf       ClusterIP   10.43.200.126   <none>           7777/TCP,8805/UDP,9090/TCP   28s
+udm       ClusterIP   10.43.19.245    <none>           7777/TCP                     28s
+udr       ClusterIP   10.43.254.146   <none>           7777/TCP                     28s
+upf       ClusterIP   10.43.36.72     <none>           8805/UDP,2152/UDP,9090/TCP   28s
+
+================================================================================
+NF REGISTRATION DETAILS (from NRF logs)
+================================================================================
+[32m11/18 17:42:37.594[0m: [[33mnrf[0m] [1;32mINFO[0m: [f9136716-c4a5-41f0-a06c-4d7382fc46f9] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:204)
+[32m11/18 17:42:59.112[0m: [[33mnrf[0m] [1;32mINFO[0m: [05db119c-c4a6-41f0-814b-a3911ca23624] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:204)
+[32m11/18 17:43:00.018[0m: [[33mnrf[0m] [1;32mINFO[0m: [066ffb68-c4a6-41f0-9766-750cce211808] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:204)
+[32m11/18 17:43:00.052[0m: [[33mnrf[0m] [1;32mINFO[0m: [0676076a-c4a6-41f0-8320-83c2b8a3ea9b] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:204)
+[32m11/18 17:43:00.085[0m: [[33mnrf[0m] [1;32mINFO[0m: [0676f846-c4a6-41f0-886f-6774e8f6d0a8] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:204)
+[32m11/18 17:43:00.137[0m: [[33mnrf[0m] [1;32mINFO[0m: [06828dc8-c4a6-41f0-bb6d-ddf49e5be502] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:204)
+[32m11/18 17:43:00.138[0m: [[33mnrf[0m] [1;32mINFO[0m: [06833f2a-c4a6-41f0-9357-0ff071104e0f] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:204)
+[32m11/18 17:43:00.243[0m: [[33mnrf[0m] [1;32mINFO[0m: [0691e5a2-c4a6-41f0-8609-b314ba1eb11d] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:204)
+
+================================================================================
+DEPLOYMENT ENDPOINTS
+================================================================================
+AMF NGAP Endpoint: 10.200.239.3 2405:8740:3f15:0:3f7b:468e:df1d:34a8:38412
+Configure your gNB to connect to: 10.200.239.3 2405:8740:3f15:0:3f7b:468e:df1d:34a8:38412
